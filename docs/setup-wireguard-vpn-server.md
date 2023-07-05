@@ -12,17 +12,19 @@ There are several way to install WireGuard on Linux, and two of them are:
 
 We are going to learn both approach in this post.
 
-## ◉ WireGuard in a nutshell
+## 1. WireGuard in a nutshell
 
 WireGuard is an open-source communication protocol that implements encrypted virtual private networks (VPNs) over UDP. It is very easy to use and secure. WireGuard aims to have better performance compared to IPSec and OpenVPN.
 
-## ◉ Client application
+## 2. Client application
 
 WireGuard do supports many operating system. Download the installer via the following link:
 
 > https://www.wireguard.com/install/
 
-## ◉ Server set up using `wireguard-install`
+## 3. WireGuard server set up
+
+### ◉ Using `wireguard-install`
 
 The easiest way to install WireGuard server is via [wireguard-install](https://github.com/angristan/wireguard-install). They provide an executable shell script to automate the installation on several linux distro, such as:
 
@@ -109,7 +111,7 @@ From that output you can tell where the client config file is located, it is in 
 
 > For more details, see https://github.com/angristan/wireguard-install
 
-## ◉ Server set up using `linuxserver/wireguard` Docker Image
+### Using `linuxserver/wireguard` Docker Image
 
 The first step is to install docker engine. Then create the VPN server by starting a new container using `linuxserver/wireguard:latest` using the following command:
 
@@ -190,13 +192,13 @@ cat peer1.conf
 
 Save the content on that `peer1.conf` file somewhere, it will be used on the client side to connect to the WireGuard server.
 
-## ◉ Whitelist the UDP port
+### ◉ Whitelist the UDP port
 
 If you are using cloud provider such as AWS where by default not all ports are public, an additional is required, which is whitelisting the inbound traffict directed to the WireGuard port (in this example, it is `51820`). Ensure to select the `UDP` protocol because WireGuard uses `UDP`.
 
 ![WireGuard VPN connect](img/setup-wireguard-vpn-server-2.png)
 
-## ◉ Connect to WireGuard `linuxserver/wireguard` Docker Image
+## 4. Connect to WireGuard `linuxserver/wireguard` Docker Image
 
 The content of the `.conf` file is something like this:
 
@@ -216,8 +218,6 @@ AllowedIPs = 0.0.0.0/0,::/0
 Now open up the WireGuard client application, click `Add tunnel`, then locate the `.conf` file. Next, click `activate` to start the VPN peering connection.
 
 ![WireGuard VPN connect](img/setup-wireguard-vpn-server-1.png)
-
-
 
 > For more details, see https://github.com/linuxserver/docker-wireguard
 
