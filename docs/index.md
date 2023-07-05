@@ -4,7 +4,7 @@ title: How To - A bunch of tech tutorials
 sidebar_label: Homepage
 ---
 
-Welcome to my blog. I named this blog `how to` because pretty much anything I wrote here is about how to do something related to tech.
+Welcome to `how to`. I wrote pretty much anything about how to do something related to tech.
 
 ---
 
