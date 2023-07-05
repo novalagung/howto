@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'How To',
+  title: 'How to',
   tagline: 'A bunch of tech tutorials',
   url: 'https://howto.novalagung.com',
   baseUrl: '/',
@@ -43,9 +43,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        // gtag: {
-        //   trackingID: 'G-HKPC8ZGM74',
-        // },
+        gtag: {
+          trackingID: 'G-69CJWBHP10',
+        },
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
