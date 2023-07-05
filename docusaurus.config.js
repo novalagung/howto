@@ -85,18 +85,18 @@ const config = {
           src: 'https://howto.novalagung.com/img/logo_small_dark.png',
           srcDark: 'https://howto.novalagung.com/img/logo_small_light.png',
         },
-        items: [
-          {
-            position: 'left',
-            label: '📖 Other blogs',
-            items: [
-              {
-                label: 'Learn Devops ',
-                href: 'https://learndevops.novalagung.com',
-              },
-            ]
-          }
-        ],
+        // items: [
+        //   {
+        //     position: 'left',
+        //     label: '📖 Other blogs',
+        //     items: [
+        //       {
+        //         label: 'Learn Devops ',
+        //         href: 'https://learndevops.novalagung.com',
+        //       },
+        //     ]
+        //   }
+        // ],
       },
       footer: {
         style: 'dark',
