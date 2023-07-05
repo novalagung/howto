@@ -9,9 +9,9 @@ In this post, we are going to learn how to setup Oracle XE Database Server on Ce
 
 ## 1. Setup Oracle XE Database Server on CentOS 6 (Oracle Linux)
 
-### ◉ Convert CentOS 6 into Oracle Linux
+### 1.1. Convert CentOS 6 into Oracle Linux
 
-The easiest way to install Oracle Database Server is through **Oracle Linux** distribution.
+The easiest way to install Oracle Database Server is through **Oracle Linux** distribution. However, you can also use CentOS 6 and convert it into Oracle Linux, and the steps to do that will also be covered in this post.
 
 Oracle Linux is a Linux distribution packaged and freely distributed by Oracle, available partially under the GNU General Public License since late 2006. It's free, we can easily get it from [Oracle Linux Download Page](https://www.oracle.com/linux/).
 
@@ -84,9 +84,9 @@ sudo yum distro-sync
 
 Just that, your Oracle Linux is ready.
 
-### ◉ Setup Oracle XE Database Server on Oracle Linux
+### 1.2. Setup Oracle XE Database Server on Oracle Linux
 
-You can get Oracle linux from [Oracle Linux download page](https://www.oracle.com/linux/), or by [converting CentOS into Oracle Linux](/convert-linux-centos-into-oracle-linux.md).
+You can get Oracle linux from [Oracle Linux download page](https://www.oracle.com/linux/), or by following the steps above.
 
 Download the **Oracle Database Express Edition 11g Release 2 for Linux x64** from https://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/xe-prior-releases-5172097.html. You might need to download it from the web browser since the download process require us to log in using oracle account (create one on the website if you haven't).
 

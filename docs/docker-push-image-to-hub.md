@@ -15,7 +15,7 @@ Ensure the Docker engine is running. If you haven't installed it, then install i
 
 ### 1.2. Docker Hub account
 
-Prepare a Docker Hub account. If you don't have it, then follow a guide on [Create Docker Hub Account](docker-hub-create-account.html).
+Prepare a Docker Hub account on https://hub.docker.com/.
 
 ### 1.3. Login to Docker Hub on the local machine
 
