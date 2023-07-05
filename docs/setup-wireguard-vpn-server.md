@@ -1,16 +1,16 @@
 ---
 title: Setup WireGuard VPN Server
 sidebar_label: Setup WireGuard VPN Server
-description: How to set up WireGuard VPN Server on Linux using wireguard-install or wireguard docker image
+description: How to setup WireGuard VPN Server on Linux using wireguard-install or wireguard docker image
 keywords: [wireguard, vpn, docker, linux, amazon linux, aws, digital ocean]
 ---
 
-There are several way to install WireGuard on Linux, and two of them are:
+There are several ways to install WireGuard on linux-based server. Two of them are:
 
 - using [wireguard-install](https://github.com/angristan/wireguard-install)
 - using [linuxserver/wireguard](https://hub.docker.com/r/linuxserver/wireguard) Docker Image
 
-We are going to learn both approach in this post.
+We are going to learn both approaches in this post.
 
 ## 1. WireGuard in a nutshell
 
@@ -18,15 +18,15 @@ WireGuard is an open-source communication protocol that implements encrypted vir
 
 ## 2. Client application
 
-WireGuard do supports many operating system. Download the installer via the following link:
+WireGuard supports many operating systems. Download the installer via the following link:
 
 > https://www.wireguard.com/install/
 
-## 3. WireGuard server set up
+## 3. WireGuard server setup
 
 ### ◉ Using `wireguard-install`
 
-The easiest way to install WireGuard server is via [wireguard-install](https://github.com/angristan/wireguard-install). They provide an executable shell script to automate the installation on several linux distro, such as:
+The easiest way to install WireGuard server is via [wireguard-install](https://github.com/angristan/wireguard-install). They provide an executable shell script to automate the installation on some Linux Distro, such as:
 
 - AlmaLinux
 - Arch Linux system
@@ -44,11 +44,11 @@ chmod +x wireguard-install.sh
 ./wireguard-install.sh
 ```
 
-You will be asked to confirm several configuration. The pre-defined value for each prompt should be sufficient, except for the `IPv4 or IPv6 public address`, for that specific prompt please ensure to have correct public IP address entered.
+You will be asked to confirm several configurations key. The pre-defined value for each prompt should be sufficient, except for the `IPv4 or IPv6 public address`, for that specific prompt, ensure to have correct public IP address entered.
 
 :::caution
 
-If you are using AWS or other cloud provider, there is a chance that the default IP address value is not the public IP, but the private IP. So please keep in mind, always use the public IP there.
+If you are using AWS or another cloud provider, there is a chance that the default IP address value is not the public IP, but the private IP. So please keep in mind, always use the public IP there.
 
 :::
 
@@ -76,9 +76,9 @@ You will be able to generate a client at the end of the installation.
 Press any key to continue...
 ```
 
-Press enter or any key to continue the installation process. Next you will be prompted to enter the several configuration for the client.
+Press enter or any key to continue the installation process. Next, you will be prompted to enter the several configuration for the client.
 
-Feel free to pick any name for `Client name` and let the other fields to be filled with the predefined value.
+Feel free to pick any name for `Client name` and let the other fields be filled with the predefined value.
 
 ```log
 Client configuration
@@ -91,7 +91,7 @@ Client WireGuard IPv4: 10.66.66.2
 Client WireGuard IPv6: fd42:42:42::2
 ```
 
-Keep pressing enter until you see the output in below. At this point the set up is pretty much completed.
+Keep pressing enter until you see the output below. At this point, the setup is pretty much completed.
 
 ```log
 Here is your client config file as a QR Code:
@@ -113,7 +113,7 @@ From that output you can tell where the client config file is located, it is in 
 
 ### ◉ Using Docker `linuxserver/wireguard`
 
-The first step is to install docker engine. Then create the VPN server by starting a new container using `linuxserver/wireguard:latest` using the following command:
+The first step is to install Docker engine. Then create the VPN server by starting a new container using `linuxserver/wireguard:latest` using the following command:
 
 - For plain Docker:
 
@@ -180,7 +180,7 @@ Ensure to adjust the value of `env var` below:
 - `TZ` → specify the timezone of your location. example: `Asia/Jakarta` or `Etc/UTC`
 - `SERVERURL` → public IP of your linux instance
 
-Not to forget, map the `/config` path within container to correct path in host. In the example I use `/home/ec2-user/workspace/wireguard/config:/config`.
+Not to forget, map the `/config` path within container to the correct path in host. In the example I use `/home/ec2-user/workspace/wireguard/config:/config`.
 
 Create the container, wait for a few seconds, then check the container logs to see the result. Then go to the path where it's pointing to the `/config`. Go to the `peers` folder.
 
@@ -194,7 +194,7 @@ Save the content on that `peer1.conf` file somewhere, it will be used on the cli
 
 ### ◉ Whitelist the UDP port
 
-If you are using cloud provider such as AWS where by default not all ports are public, an additional is required, which is whitelisting the inbound traffict directed to the WireGuard port (in this example, it is `51820`). Ensure to select the `UDP` protocol because WireGuard uses `UDP`.
+If you are using cloud provider such as AWS where by default not all ports are public, an additional is required, which is whitelisting the inbound traffic directed to the WireGuard port (in this example, it is `51820`). Ensure to select the `UDP` protocol because WireGuard uses `UDP`.
 
 ![WireGuard VPN connect](img/setup-wireguard-vpn-server-2.png)
 
