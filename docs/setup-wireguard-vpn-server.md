@@ -111,7 +111,7 @@ From that output you can tell where the client config file is located, it is in 
 
 > For more details, see https://github.com/angristan/wireguard-install
 
-### Using `linuxserver/wireguard` Docker Image
+### ◉ Using Docker `linuxserver/wireguard`
 
 The first step is to install docker engine. Then create the VPN server by starting a new container using `linuxserver/wireguard:latest` using the following command:
 
