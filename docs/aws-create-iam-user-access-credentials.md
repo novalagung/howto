@@ -1,6 +1,6 @@
 ---
 title: How to Create IAM User Access Credentials in AWS
-sidebar_label: 📝 Create IAM User Access Credentials in AWS
+sidebar_label: Create IAM User Access Credentials in AWS
 description: How to Create IAM User Access Credentials in AWS
 keywords: [aws, iam user, access credentials, access key]
 ---

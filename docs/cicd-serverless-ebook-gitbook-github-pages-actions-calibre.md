@@ -1,6 +1,6 @@
 ---
 title: How to Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
-sidebar_label: 📝 Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
+sidebar_label: Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
 description: How to Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
 keywords: [serverless, ebook, github, pipeline, calibre]
 ---

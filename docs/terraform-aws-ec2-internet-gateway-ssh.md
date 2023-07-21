@@ -1,6 +1,6 @@
 ---
 title: How to Automate Setup of AWS EC2 with Internet Gateway and SSH Access enabled using Terraform
-sidebar_label: 📝 Automate Setup of AWS EC2 with IGW and SSH Access enabled using Terraform
+sidebar_label: Automate Setup of AWS EC2 with IGW and SSH Access enabled using Terraform
 description: How to Automate Setup of AWS EC2 with Internet Gateway and SSH Access enabled using Terraform
 keywords: [aws, ec2, alb, terraform, serverless, automation]
 ---

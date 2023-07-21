@@ -1,6 +1,6 @@
 ---
 title: How to Deploy App to Minikube Cluster using Deployment controller, Service, and Horizontal Pod Autoscaler
-sidebar_label: 📝 Deploy App to Minikube Cluster using Deployment controller, Service, and HPA
+sidebar_label: Deploy App to Minikube Cluster using Deployment controller, Service, and HPA
 description: How to Deploy App to Minikube Cluster using Deployment controller, Service, and Horizontal Pod Autoscaler
 keywords: [k8s, kubernetes, minikube, pod autoscaler, microservices]
 ---
