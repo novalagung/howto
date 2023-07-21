@@ -75,6 +75,13 @@ blockquote {
   content: "Search ...";
 }
 
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2rem;
+  margin-top: calc( var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading) );
+  margin-bottom: calc( var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading) * 2 );
+  font-weight: normal;
+}
+
 .menu.thin-scrollbar {
   padding-bottom: 25px;
 }
