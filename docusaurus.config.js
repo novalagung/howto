@@ -85,18 +85,36 @@ const config = {
           src: 'https://howto.novalagung.com/img/logo_small_dark.png',
           srcDark: 'https://howto.novalagung.com/img/logo_small_light.png',
         },
-        // items: [
-        //   {
-        //     position: 'left',
-        //     label: '📖 Other blogs',
-        //     items: [
-        //       {
-        //         label: 'Learn Devops ',
-        //         href: 'https://learndevops.novalagung.com',
-        //       },
-        //     ]
-        //   }
-        // ],
+        items: [
+          {
+            position: 'left',
+            label: '📖 Webbook/Ebook',
+            items: [
+              {
+                label: 'Dasar Pemrograman Golang ',
+                href: 'https://dasarpemrogramangolang.novalagung.com',
+              },
+              {
+                label: 'Dasar Pemrograman Python ',
+                href: 'https://dasarpemrogramanpython.novalagung.com',
+              },
+              {
+                label: 'Dasar Pemrograman Rust ',
+                href: 'https://dasarpemrogramanrust.novalagung.com',
+              },
+            ]
+          },
+          {
+            position: 'left',
+            label: '▶️ Udemy courses',
+            items: [
+              {
+                label: 'Udemy Course: Praktis Belajar Docker dan Kubernetes (FREE Juni 2023) ',
+                href: 'https://www.udemy.com/course/praktis-belajar-docker-dan-kubernetes-untuk-pemula/?couponCode=FREE-202306',
+              },
+            ]
+          }
+        ],
       },
       footer: {
         style: 'dark',
