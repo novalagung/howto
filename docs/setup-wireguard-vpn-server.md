@@ -196,7 +196,7 @@ Save the content on that `peer1.conf` file somewhere, it will be used on the cli
 
 If you are using cloud provider such as AWS where by default not all ports are public, an additional is required, which is whitelisting the inbound traffic directed to the WireGuard port (in this example, it is `51820`). Ensure to select the `UDP` protocol because WireGuard uses `UDP`.
 
-![WireGuard VPN connect](img/setup-wireguard-vpn-server-2.png)
+![WireGuard VPN connect](img/setup-wireguard-vpn-server-1.png)
 
 ## 4. Connect to WireGuard `linuxserver/wireguard` Docker Image
 
@@ -217,7 +217,7 @@ AllowedIPs = 0.0.0.0/0,::/0
 
 Now open up the WireGuard client application, click `Add tunnel`, then locate the `.conf` file. Next, click `activate` to start the VPN peering connection.
 
-![WireGuard VPN connect](img/setup-wireguard-vpn-server-1.png)
+![WireGuard VPN connect](img/setup-wireguard-vpn-server-2.png)
 
 > For more details, see https://github.com/linuxserver/docker-wireguard
 

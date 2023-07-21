@@ -35,7 +35,7 @@ First of all, we need to book a repo on Docker Hub. Later we will push the image
 
 Go to https://hub.docker.com/repository/create, create a new repo (under your account), name it `hello-world` (or anything).
 
-![Docker - Push Image to hub.docker.com - create a repo on Docker Hub](https://i.imgur.com/uvLjxqv.png)
+![Docker - Push Image to hub.docker.com - create a repo on Docker Hub](img/docker-push-image-to-hub-1.png)
 
 ### 2.2. Clone the example app then build as Docker image
 
@@ -56,7 +56,7 @@ docker build . -t novalagung/hello-world:v0
 
 As we can see from the command above, the tag `v0` is used on this image.
 
-![Docker - Push Image to hub.docker.com - build image](https://i.imgur.com/aiduEji.png)
+![Docker - Push Image to hub.docker.com - build image](img/docker-push-image-to-hub-2.png)
 
 ### 2.3. Push image into Docker Hub
 
@@ -67,7 +67,7 @@ Next, use `docker push` command below to push the image that we just built.
 docker push novalagung/hello-world
 ```
 
-![Docker - Push Image to hub.docker.com - push image to Docker Hub](https://i.imgur.com/TUy6Ffa.png)
+![Docker - Push Image to hub.docker.com - push image to Docker Hub](img/docker-push-image-to-hub-3.png)
 
 Ok, done.
 
@@ -82,7 +82,7 @@ We have pushed the image into Docker Hub. To pull it, use the `docker pull` comm
 docker pull novalagung/hello-world:v0
 ```
 
-![Docker - Push Image to hub.docker.com - pull image from Docker Hub](https://i.imgur.com/tdRlNr7.png)
+![Docker - Push Image to hub.docker.com - pull image from Docker Hub](img/docker-push-image-to-hub-4.png)
 
 ## 4. The `latest` tag
 
@@ -105,7 +105,7 @@ docker build . -t novalagung/hello-world:latest
 docker push novalagung/hello-world:latest
 ```
 
-![Docker - Push Image to hub.docker.com - push latest tag to Docker Hub](https://i.imgur.com/6y0MEEA.png)
+![Docker - Push Image to hub.docker.com - push latest tag to Docker Hub](img/docker-push-image-to-hub-5.png)
 
 ---
 
