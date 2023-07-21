@@ -1,6 +1,6 @@
 ---
 title: How to Setup Oracle XE Database Server
-sidebar_label: 📝 How to Setup Oracle XE Database Server
+sidebar_label: 📝 Setup Oracle XE Database Server
 description: How to Setup Oracle XE Database Server
 keywords: [oracle, oracle xe, oracle linux, linux, database]
 ---

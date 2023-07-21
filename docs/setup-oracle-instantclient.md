@@ -1,6 +1,6 @@
 ---
 title: How to Setup Oracle Instant Client
-sidebar_label: 📝 How to Setup Oracle Instant Client
+sidebar_label: 📝 Setup Oracle Instant Client
 description: How to Setup Oracle Instant Client
 keywords: [oracle, instantclient, oracle linux, linux, database]
 ---

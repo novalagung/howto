@@ -78,3 +78,9 @@ blockquote {
 .menu.thin-scrollbar {
   padding-bottom: 25px;
 }
+
+.menu__list-item:first-child {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
