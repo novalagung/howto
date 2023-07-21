@@ -19,7 +19,9 @@ export default function ContentWrapper(props) {
     <>
       <Content {...props} />
       <hr />
-      {window?.location?.pathname === '/' && <SubStack />}
+      <BrowserOnly>
+        {() => window?.location?.pathname === '/' && <SubStack />}
+      </BrowserOnly>
     </>
   );
 }
