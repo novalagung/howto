@@ -1,5 +1,6 @@
 import React from 'react';
 import Content from '@theme-original/DocItem/Content';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const SubStack = () => {
   return <>
