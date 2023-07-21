@@ -425,9 +425,3 @@ After a minute passed, suddenly a total of 6 pods created. This is happening bec
 HPA is not only able to magically scale the pod during high traffic but on low traffic, the scaling process will happen as well. Do stop the stress test and wait for a few minutes, and check the HPA and pods again, you will see the number of pods reduced to `spec.minReplicas` again.
 
 Ok, that's it.
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

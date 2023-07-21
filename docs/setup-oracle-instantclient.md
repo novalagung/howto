@@ -197,9 +197,3 @@ CORE	11.2.0.2.0	Production
 TNS for Linux: Version 11.2.0.2.0 - Production
 NLSRTL Version 11.2.0.2.0 - Production
 ```
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

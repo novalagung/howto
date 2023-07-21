@@ -434,9 +434,3 @@ We can see from the image above, the HTTP response is different from one another
 In the AWS console, the instances that up and running are visible.
 
 ![Terraform - Automate setup of AWS EC2 with Load Balancer and Auto Scaling enabled - aws console](img/terraform-aws-load-balancer-auto-scaling-3.png)
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

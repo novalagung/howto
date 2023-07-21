@@ -5,9 +5,3 @@ sidebar_label: 🏠 Homepage
 ---
 
 Welcome to `how to`. I wrote pretty much anything about how to do something related to tech.
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

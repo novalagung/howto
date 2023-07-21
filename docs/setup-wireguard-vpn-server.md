@@ -220,9 +220,3 @@ Now open up the WireGuard client application, click `Add tunnel`, then locate th
 ![WireGuard VPN connect](img/setup-wireguard-vpn-server-2.png)
 
 > For more details, see https://github.com/linuxserver/docker-wireguard
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

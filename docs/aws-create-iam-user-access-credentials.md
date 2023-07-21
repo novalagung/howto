@@ -38,9 +38,3 @@ Do click next few times, then the user creation process will be done.
 Copy the **access key ID** and **secret access key**, save it into some notes because you won't be able to see the secret key again.
 
 Ok, that's it. The keys are ready to use.
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

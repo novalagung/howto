@@ -106,9 +106,3 @@ docker push novalagung/hello-world:latest
 ```
 
 ![Docker - Push Image to hub.docker.com - push latest tag to Docker Hub](img/docker-push-image-to-hub-5.png)
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

@@ -265,9 +265,3 @@ ssh -i id_rsa ec2-user@ec2-18-140-245-218.ap-southeast-1.compute.amazonaws.com
 ![Terraform - Automate setup of AWS EC2 with Internet Gateway and SSH Access enabled - ssh to ec2 instance](img/terraform-aws-ec2-internet-gateway-ssh-4.png)
 
 We can see from the image above that we can connect to ec2 instance via SSH, and the instance is connected to the internet.
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />

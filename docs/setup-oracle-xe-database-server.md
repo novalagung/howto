@@ -323,9 +323,3 @@ NLSRTL Version 11.2.0.2.0 - Production
 ```
 
 If you the container stopped, then you just need to start it. No need to create new container using same specification.
-
----
-
-import Substack from '@site/src/components/Substack';
-
-<Substack />
