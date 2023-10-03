@@ -1,7 +1,7 @@
 ---
-title: How to Setup WireGuard VPN Server
-sidebar_label: Setup WireGuard VPN Server
-description: How to setup WireGuard VPN Server on Linux using wireguard-install or wireguard docker image
+title: How to Setup WireGuard VPN Server + UI
+sidebar_label: Setup WireGuard VPN Server + UI
+description: How to setup WireGuard VPN Server and Wireguard UI on Linux using wireguard-install or wireguard docker image
 keywords: [wireguard, vpn, docker, linux, amazon linux, aws, digital ocean]
 ---
 
@@ -145,6 +145,7 @@ The first step is to install Docker engine. Then create the VPN server by starti
 
   ```yaml
   version: '3.7'
+
   services:
     wireguard:
       image: lscr.io/linuxserver/wireguard:latest
@@ -192,13 +193,15 @@ cat peer1.conf
 
 Save the content on that `peer1.conf` file somewhere, it will be used on the client side to connect to the WireGuard server.
 
+> For more details, see https://github.com/linuxserver/docker-wireguard
+
 ### ◉ Whitelist the UDP port
 
 If you are using cloud provider such as AWS where by default not all ports are public, an additional is required, which is whitelisting the inbound traffic directed to the WireGuard port (in this example, it is `51820`). Ensure to select the `UDP` protocol because WireGuard uses `UDP`.
 
 ![WireGuard VPN connect](img/setup-wireguard-vpn-server-1.png)
 
-## 4. Connect to WireGuard `linuxserver/wireguard` Docker Image
+## 4. Connect to WireGuard
 
 The content of the `.conf` file is something like this:
 
@@ -219,4 +222,75 @@ Now open up the WireGuard client application, click `Add tunnel`, then locate th
 
 ![WireGuard VPN connect](img/setup-wireguard-vpn-server-2.png)
 
-> For more details, see https://github.com/linuxserver/docker-wireguard
+## 5. Set Up WireGuard UI
+
+WireGuard UI is useful tools to manage your WireGuard server via friendly user interface. Such as adding user, adding new client, and other type of actions can be done in interactive manner via WireGuard UI.
+
+If you use `linuxserver/wireguard` Docker image on your end, add the `ngoduykhanh/wireguard-ui` image to `docker-compose.yml`, so the content of that file would be like this:
+
+```yaml
+version: '3.7'
+
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Jakarta
+      - SERVERURL=123.456.78.9
+      - SERVERPORT=51820
+      - PEERS=1
+      - PEERDNS=1.1.1.1
+      - INTERNAL_SUBNET=10.13.13.0
+      - ALLOWEDIPS=0.0.0.0/0,::/0
+      - PERSISTENTKEEPALIVE_PEERS=all
+      - LOG_CONFS=true
+    volumes:
+      - /home/ec2-user/workspace/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 5000:5000 # ← whitelist port 5000 for WireGuard UI
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: always
+
+  wireguard-ui:
+    image: ngoduykhanh/wireguard-ui:latest
+    container_name: wireguard-ui
+    depends_on:
+      - wireguard
+    cap_add:
+      - NET_ADMIN
+    network_mode: service:wireguard
+    environment:
+      - SENDGRID_API_KEY
+      - EMAIL_FROM_ADDRESS
+      - EMAIL_FROM_NAME
+      - SESSION_SECRET
+      - WGUI_USERNAME=admin
+      - WGUI_PASSWORD=admin
+      - WG_CONF_TEMPLATE
+      - WGUI_MANAGE_START=true
+      - WGUI_MANAGE_RESTART=true
+    logging:
+      driver: json-file
+      options:
+        max-size: 50m
+    volumes:
+      - /home/ec2-user/workspace/wireguard/config:/etc/wireguard
+      - /home/ec2-user/workspace/wireguard/db:/app/db
+```
+
+Re-run the `docker-compose up -d` command, and then access the UI via `http://yourip:5000`. You also need to whitelist the inbound access for port `5000`.
+
+By default, both username and password is set to `admin`. Right after you logged in to the dashboard, do immediately change the password for safety reason. To do that, click `User Settings → Edit → Enter your new password → Save`.
+
+To create a new client/tunnel access, click the `Wireguard Clients → New Client → Fill the info → Submit`.
+
+![WireGuard VPN connect](img/setup-wireguard-vpn-server-3.png)
