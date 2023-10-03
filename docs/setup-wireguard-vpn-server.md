@@ -289,8 +289,10 @@ services:
 
 Re-run the `docker-compose up -d` command, and then access the UI via `http://yourip:5000`. You also need to whitelist the inbound access for port `5000`.
 
+![WireGuard VPN connect](img/setup-wireguard-vpn-server-3.png)
+
 By default, both username and password is set to `admin`. Right after you logged in to the dashboard, do immediately change the password for safety reason. To do that, click `User Settings → Edit → Enter your new password → Save`.
 
 To create a new client/tunnel access, click the `Wireguard Clients → New Client → Fill the info → Submit`.
 
-![WireGuard VPN connect](img/setup-wireguard-vpn-server-3.png)
+![WireGuard VPN connect](img/setup-wireguard-vpn-server-4.png)
