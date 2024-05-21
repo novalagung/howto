@@ -33,46 +33,10 @@
 }
 
 /* custom css */
-.theme-doc-markdown.markdown hr, .theme-doc-markdown.markdown + hr {
-  background-color: #eeeeee;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
 
-blockquote {
-  margin-left: 15px;
-  background-color: #fbfbfb;
-  padding: 15px;
-  font-style: italic;
-}
-[data-theme='dark'] blockquote {
-  background-color: #282a36;
-}
-
-.theme-code-block.language-rust,
-.theme-code-block.language-bash {
+.theme-code-block[class*="language-"] {
   background: #5B3A29 !important;
   color: #ffffff !important;
-}
-
-.navbar__brand {
-  margin-right: 1.5rem;
-}
-
-.aa-DetachedSearchButton {
-  width: 100px !important;
-  border-color: #d5d8da !important;
-  background-color: white;
-  height: 33px;
-}
-.aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
-  color: #d5d8da;
-}
-.aa-DetachedSearchButton .aa-DetachedSearchButtonIcon .aa-DetachedSearchButtonPlaceholder {
-  display: block;
-}
-.aa-DetachedSearchButton .aa-DetachedSearchButtonIcon .aa-DetachedSearchButtonPlaceholder::after {
-  content: "Search ...";
 }
 
 .markdown h1:first-child {
@@ -80,10 +44,6 @@ blockquote {
   margin-top: calc( var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading) );
   margin-bottom: calc( var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading) * 2 );
   font-weight: normal;
-}
-
-.menu.thin-scrollbar {
-  padding-bottom: 25px;
 }
 
 .menu__list-item {
