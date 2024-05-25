@@ -1,7 +1,7 @@
 ---
-title: How to Setup App Access Protection using Cloudflare Zero Trust and Terraform
-sidebar_label: Setup App Access Protection using Cloudflare Zero Trust and Terraform
-description: How to setup app access protection using Cloudflare Zero Trust and Terraform
+title: How to Restrict App Access using Cloudflare Zero Trust and Terraform
+sidebar_label: Restrict App Access using Cloudflare Zero Trust and Terraform
+description: How to restrict app access using Cloudflare Zero Trust and Terraform
 keywords: [terraform, cloudflare, zero trust, security, cyber security, 2fa]
 ---
 
