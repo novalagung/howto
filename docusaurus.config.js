@@ -12,6 +12,7 @@ const config = buildConfig({
   googleTrackingID: 'G-69CJWBHP10',
   facebookAppID: '875100400724859',
   showContentFooterEbookWrapper: false,
+  showNavItems: false,
 });
 
 module.exports = config;
