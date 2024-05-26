@@ -10,7 +10,7 @@ In this post, we are going to learn about how to deploy a containerized app into
 
 The application that we are going to use on the tutorial is a simple hello world app written in Go. The app is dockerized and the image is available on [Docker Hub](https://hub.docker.com/repository/docker/novalagung/hello-world).
 
-You can also deploy your app, just do push it into Docker Hub. This guide might help you [Push Image to hub.docker.com](/docker-push-image-to-hub.html).
+You can also use your own app, make sure it is pushed to Docker Hub.
 
 ## 1. Prerequisites
 
