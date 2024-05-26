@@ -16,7 +16,7 @@ Ensure terraform CLI is available. If not, then do install it first.
 
 ### 1.2. Individual AWS IAM user
 
-Prepare a new individual IAM user with programmatic access key enabled and have access to EC2 management. We will use the `access_key` and `secret_key` on this tutorial. If you haven't created the IAM user, then follow the guide on [How to Create IAM User Access Credentials in AWS](aws-create-iam-user-access-credentials.md).
+Prepare a new individual IAM user with programmatic access key enabled and have access to EC2 management. We will use the `access_key` and `secret_key` on this tutorial.
 
 ### 1.3. `ssh-keygen` and `ssh` commands
 

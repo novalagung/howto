@@ -36,10 +36,6 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'aws-create-iam-user-access-credentials'
-    },
-    {
-      type: 'doc',
       id: 'kubernetes-minikube-deployment-service-horizontal-autoscale'
     },
     {
@@ -56,10 +52,6 @@ const sidebars = {
       type: 'link',
       href: 'https://javascript.plainenglish.io/react-native-bluetooth-low-energy-peripheral-communication-e7cb93abf69',
       label: 'Peripheral Communication with React Native BLE (Bluetooth Low Energy)',
-    },
-    {
-      type: 'doc',
-      id: 'docker-push-image-to-hub'
     },
     {
       type: 'doc',
