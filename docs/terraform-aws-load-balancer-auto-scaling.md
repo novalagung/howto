@@ -3,6 +3,7 @@ title: How to Automate Setup of AWS EC2 with Application Load Balancer and Auto 
 sidebar_label: Automate Setup of AWS EC2 with ALB and Auto Scaling enabled using Terraform
 description: How to Automate Setup of AWS EC2 with Application Load Balancer and Auto Scaling enabled using Terraform
 keywords: [aws, ec2, alb, terraform, serverless, automation]
+displayed_sidebar: "manualSidebar"
 ---
 
 In this post, we are going to learn about the usage of Terraform to automate the setup of AWS EC2 instance in an auto-scaling environment with an Application Load Balancer applied.

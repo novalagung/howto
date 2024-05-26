@@ -1,8 +1,9 @@
 ---
 title: How to Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
-sidebar_label: Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
+sidebar_label: Setup Serverless Ebook/Webbook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
 description: How to Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
 keywords: [serverless, ebook, github, pipeline, calibre]
+displayed_sidebar: "manualSidebar"
 ---
 
 In this tutorial we are going to create an ebook instance using Github, then publish it to the Github pages in an automated manner (on every push to upstream) managed by Github Actions, and it will not deploy only the web version, but the ebook files as wall (in `.pdf`, `.epub`, and `.mobi` format).

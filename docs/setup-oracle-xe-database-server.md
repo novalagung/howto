@@ -3,6 +3,7 @@ title: How to Setup Oracle XE Database Server
 sidebar_label: Setup Oracle XE Database Server
 description: How to Setup Oracle XE Database Server
 keywords: [oracle, oracle xe, oracle linux, linux, database]
+displayed_sidebar: "manualSidebar"
 ---
 
 In this post, we are going to learn how to setup Oracle XE Database Server on CentOS, Oracle Linux, and using Docker Container.

@@ -48,6 +48,7 @@
 
 .menu__list-item {
   position: relative;
+  padding-right: 10px;
 }
 .menu__list-item:first-child {
   border-bottom: 1px solid #eeeeee;
@@ -56,6 +57,9 @@
 }
 .menu__list-item > a {
   padding-left: 5px;
+}
+.menu__list-item > a svg {
+  display: none;
 }
 .menu__list-item:not(:first-child):before {
   content: "📝";

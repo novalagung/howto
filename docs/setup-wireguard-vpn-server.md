@@ -3,6 +3,7 @@ title: How to Setup WireGuard VPN Server + UI
 sidebar_label: Setup WireGuard VPN Server + UI
 description: How to setup WireGuard VPN Server and Wireguard UI on Linux using wireguard-install or wireguard docker image
 keywords: [wireguard, vpn, docker, linux, amazon linux, aws, digital ocean]
+displayed_sidebar: "manualSidebar"
 ---
 
 There are several ways to install WireGuard on linux-based server. Two of them are:

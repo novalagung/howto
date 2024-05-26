@@ -3,6 +3,7 @@ title: How to Setup Oracle Instant Client
 sidebar_label: Setup Oracle Instant Client
 description: How to Setup Oracle Instant Client
 keywords: [oracle, instantclient, oracle linux, linux, database]
+displayed_sidebar: "manualSidebar"
 ---
 
 In this post, we are going to learn how to setup Oracle instant client on Linux, Windows, and MacOS.

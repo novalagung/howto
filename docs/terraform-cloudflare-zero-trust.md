@@ -3,6 +3,7 @@ title: How to Restrict App Access using Cloudflare Zero Trust and Terraform
 sidebar_label: Restrict App Access using Cloudflare Zero Trust and Terraform
 description: How to restrict app access using Cloudflare Zero Trust and Terraform
 keywords: [terraform, cloudflare, zero trust, security, cyber security, 2fa]
+displayed_sidebar: "manualSidebar"
 ---
 
 This post is a straightforward hands-on tutorial about implementation of Cloudflare Zero Trust on website by using Terraform.

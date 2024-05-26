@@ -3,6 +3,7 @@ title: How to Push Docker Image to Docker Hub
 sidebar_label: Push Docker Image to Docker Hub
 description: How to Push Docker Image to Docker Hub
 keywords: [oracle, oracle xe, oracle linux, linux, database]
+displayed_sidebar: "manualSidebar"
 ---
 
 In this post, we are going to learn about how to push a Docker image to [Docker Hub](https://hub.docker.com/).
