@@ -12,7 +12,7 @@ const config = buildConfig({
   googleTrackingID: 'G-69CJWBHP10',
   facebookAppID: '875100400724859',
   algoliaAppID: 'VDG05CUB84',
-  algoliaApiKey: '2264fb01b83efb8f672d191c221f853b',
+  algoliaApiKey: '9e7865c40f183caef9740477a4226d7d',
   algoliaIndexName: 'howto-novalagung',
   showContentFooterEbookWrapper: false,
   showNavItems: false,
