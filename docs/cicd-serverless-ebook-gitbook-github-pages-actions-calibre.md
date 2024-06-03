@@ -1,34 +1,34 @@
 ---
-title: How to Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
-sidebar_label: Setup Serverless Ebook/Webbook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
-description: How to Setup Serverless Ebook using Gitbook CLI, Github Pages, Github Actions CI/CD, and Calibre
-keywords: [serverless, ebook, github, pipeline, calibre]
+title: How to Setup Serverless Ebook using Gitbook CLI (Honkit), Github Pages, Github Actions CI/CD, and Calibre
+sidebar_label: Setup Serverless Ebook/Webbook using Gitbook CLI (Honkit), Github Pages, Github Actions CI/CD, and Calibre
+description: How to Setup Serverless Ebook using Gitbook CLI (Honkit), Github Pages, Github Actions CI/CD, and Calibre
+keywords: [serverless, ebook, github, pipeline, calibre, gitbook, honkit]
 displayed_sidebar: "manualSidebar"
 ---
 
 In this tutorial we are going to create an ebook instance using Github, then publish it to the Github pages in an automated manner (on every push to upstream) managed by Github Actions, and it will not deploy only the web version, but the ebook files as wall (in `.pdf`, `.epub`, and `.mobi` format).
 
-> The very example of this tutorial is ... this website 😊 https://devops.novalagung.com/en/
+> One of our programming websites/ebooks was developed using this approach, https://dasarpemrogramangolang.novalagung.com/
 
-For every incoming push to the upstream, Github Actions (CI/CD) will trigger certain processes (like compiling and generating the ebook), then the result will be pushed to the `gh-pages` branch, make it publicly accessible.
+For every incoming push to the upstream, GitHub Actions (CI/CD) will trigger certain processes (like compiling and generating the ebook), then the result will be pushed to the `gh-pages` branch, making it publicly accessible.
 
 ## 1. Prerequisites
 
-### 1.1. Gitbook CLI
+### 1.1. Gitbook CLI / Honkit
 
-Install gitbook CLI (if you haven't). Do follow the guide on https://github.com/GitbookIO/gitbook-cli.
+Install Honkit (the updated version of Gitbook CLI). The guide is available here https://github.com/honkit/honkit/.
 
 ### 1.2. Github account
 
-Ensure you have a Github account.
+Ensure you have a GitHub account.
 
 ### 1.3. Git client
 
-Ensure you have Git client installed in your local machine.
+Ensure you have Git client installed on your local machine.
 
 ## 2. Guide
 
-### 2.1. Create a Github repo
+### 2.1. Create a GitHub repo
 
 First, create a new repo in your Github account, it can be a private one or public, doesn't matter. Just for the sake of this tutorial, I am going to pick `softwareengineering` as the repo name.
 
@@ -36,25 +36,27 @@ First, create a new repo in your Github account, it can be a private one or publ
 
 ### 2.2. Create a new Gitbook project
 
-Next, use `gitbook` command line to initialize a new project, name it anyhing. Here I'll use `softwareengineering`, the same one as the git repo name.
+Next, use `gitbook` command line to initialize a new project, name it anything. Here I'll use `softwareengineering`, the same one as the git repo name.
 
 After the project setup is finished, try to test it locally.
 
 ```bash
-gitbook init softwareengineering
+npx honkit softwareengineering
 cd softwareengineering
-gitbook serve
+npx honkit serve
 ```
+
+> If you folk are using the legacy Gitbook CLI, replace the `npx honkit` with `gitbook`
 
 ![Serverless Ebook using Gitbook, Github Pages, Github Actions, and Calibre - Gitbook init project](https://i.imgur.com/99Q5kvv.png)
 
-As we can see from image above, the web version of the book is running up.
+As we can see from the image above, the web version of the book is running up.
 
 ### 2.3. Prepare ssh Github deploy key
 
-Next, we are going to use Github Action plugin [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) to automate pushing resources from git repo server to the `gh-pages`.
+Next, we are going to use the Github Action plugin [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) to automate pushing resources from git repo server to the `gh-pages`.
 
-To make this scenario happen, first, generate new key pair using `ssh-keygen` command below. We will use the keys as Github deploy key.
+To make this scenario happen, first, generate a new key pair using `ssh-keygen` command below. We will use the keys as GitHub deploy key.
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
@@ -68,13 +70,13 @@ The above command generates two files:
 - `gh-pages.pub` file as the public key
 - `gh-pages` file as the private key
 
-Upload these two files into repo's project keys and secret menu respectively. To do that, open the repo, click **Settings**, then do follow the steps below:
+Upload these two files into the repo's project keys and secret menu respectively. To do that, open the repo, click **Settings**, then follow the steps below:
 
 ![Serverless Ebook using Gitbook, Github Pages, Github Actions, and Calibre - prepare Github deploy key](https://i.imgur.com/t8RVwN7.png)
 
-### 2.4. Create Github workflow CI/CD file for generating the web version of the ebook
+### 2.4. Create GitHub workflow CI/CD file for generating the web version of the ebook
 
-Now we are going to make Github able to automatically deploy the web version of the ebook on every push. And we want that to be applied into the first push as well.
+Now we are going to make Github able to automatically deploy the web version of the ebook on every push. And we want that to be applied to the first push as well.
 
 Create a new workflow file named `deploy.yml`, place it in `<yourproject>/.github/workflows`, then fill it with the configuration below:
 
@@ -116,7 +118,7 @@ In summary, the workflow above will do these things sequentially:
 - Install `nodejs`.
 - Install `gitbook` CLI.
 - Build the project.
-- use `peaceiris/actions-gh-pages` plugin to deploy the built result to `gh-pages` branch. The Github deploy key that we just uploaded is used by this plugin.
+- use `peaceiris/actions-gh-pages` plugin to deploy the built result to `gh-pages` branch. The GitHub deploy key that we just uploaded is used by this plugin.
 
 ### 2.5. Push project to Github repo
 
@@ -137,7 +139,7 @@ git remote add origin git@github.com:novalagung/softwareengineering.git
 git push origin master
 ```
 
-Navigate to browser, open your Github repo, click `Actions`, watch a workflow process that currently is running.
+Navigate to the browser, open your Github repo, click `Actions`, and watch a workflow process that currently is running.
 
 ![Serverless Ebook using Gitbook, Github Pages, Github Actions, and Calibre - Github workflow](https://i.imgur.com/SZfwqZs.png)
 
@@ -150,7 +152,7 @@ https://novalagung.github.io/softwareengineering/
 
 ![Serverless Ebook using Gitbook, Github Pages, Github Actions, and Calibre - open web version of the book](https://i.imgur.com/HzCygaX.png)
 
-If you are still not sure about what is the valid URL, open **Settings** menu of your Github repo then scrolls down a little bit until **Github Pages** section appears. The Github Pages URL will appear there.
+If you are still not sure about what is the valid URL, open **Settings** menu of your Github repo then scroll down a little bit until **Github Pages** section appears. The GitHub Pages URL will appear there.
 
 ![Serverless Ebook using Gitbook, Github Pages, Github Actions, and Calibre - Github pages url](https://i.imgur.com/eD5BmPv.jpg)
 
@@ -158,7 +160,7 @@ If you are still not sure about what is the valid URL, open **Settings** menu of
 
 Ok, now we will modify the workflow so it will be able to generate the ebook files (`.pdf`, `.epub`, and `.mobi`), not just the web version.
 
-Do open the previous `deploy.yml` file, add a new job called `job_deploy_ebooks`.
+Do open the previous `deploy.yml` file, and add a new job called `job_deploy_ebooks`.
 
 ```yaml
 # file ./softwareengineering/.github/workflow/deploy.yml
@@ -260,7 +262,7 @@ jobs:
         cp ./CNAME _book/CNAME
 ```
 
-Now push the update into upstream.
+Now push the update to upstream.
 
 ```bash
 git add .
@@ -274,7 +276,7 @@ Watch the workflow progress in the repo **Actions** menu. After it is finished, 
 
 ### 2.8. Enable `SSL/HTTPS` to our Github Pages
 
-Lastly, before we end this tutorial, let's enable `SSL/HTTPS` into our page. No need to generate a SSL certificate file and etc, since Github will handle the setup. We just need to navigate to the **Settings** menu on the the repo, then scroll down a little bit until **GitHub Pages** section appears. Do check the **Enforce HTTPS** option. After that, wait for a few minutes, then try the custom domain again.
+Lastly, before we end this tutorial, let's enable `SSL/HTTPS` on our page. No need to generate an SSL certificate file and etc, since Github will handle the setup. We just need to navigate to the **Settings** menu on the repo, then scroll down a little bit until **GitHub Pages** section appears. Do check the **Enforce HTTPS** option. After that, wait for a few minutes, then try the custom domain again.
 
 ![Serverless Ebook using Gitbook, Github Pages, Github Actions, and Calibre - enforce https to Github pages](https://i.imgur.com/r5ca0Qw.png)
 
